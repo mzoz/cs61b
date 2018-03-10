@@ -105,7 +105,19 @@ public class IntList {
         return new IntList(L.first, copy(L.rest));
     }
 
+    public static IntList reverse(IntList L) {
+        if (L == null) {
+            return null;
+        }
 
+        if (L.rest == null) {
+            return L;
+        }
+
+        IntList temp = L.rest;
+        L.rest = null;
+        return dcatenate(reverse(temp), L);
+    }
 
 
 
