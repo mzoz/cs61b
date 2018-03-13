@@ -1,5 +1,3 @@
-import jdk.jfr.Threshold;
-
 public class ArrayDeque<T> {
     private T[] items;
     private int nextFirst, nextLast;
