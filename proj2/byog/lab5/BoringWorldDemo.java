@@ -10,6 +10,8 @@ import byog.TileEngine.Tileset;
 public class BoringWorldDemo {
     private static final int WIDTH = 60;
     private static final int HEIGHT = 30;
+    private static final int w = 50;
+    private static final int h = 20;
 
     public static void main(String[] args) {
         // initialize the tile rendering engine with a window of size WIDTH x HEIGHT
@@ -17,10 +19,10 @@ public class BoringWorldDemo {
         ter.initialize(WIDTH, HEIGHT);
 
         // initialize tiles
-        TETile[][] world = new TETile[WIDTH][HEIGHT];
-        for (int x = 0; x < WIDTH; x += 1) {
-            for (int y = 0; y < HEIGHT; y += 1) {
-                world[x][y] = Tileset.NOTHING;
+        TETile[][] world = new TETile[w][h];
+        for (int x = 0; x < w; x += 1) {
+            for (int y = 0; y < h; y += 1) {
+                world[x][y] = Tileset.GRASS;
             }
         }
 
@@ -34,6 +36,4 @@ public class BoringWorldDemo {
         // draws the world to the screen
         ter.renderFrame(world);
     }
-
-
 }
