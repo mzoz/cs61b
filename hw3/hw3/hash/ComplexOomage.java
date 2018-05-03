@@ -15,6 +15,7 @@ public class ComplexOomage implements Oomage {
         for (int x : params) {
             total = total * 256;
             total = total + x;
+            // deadly flaw: when x = 0, hashcode % mod = 0 for all mod <= 2^8
         }
         return total;
     }
