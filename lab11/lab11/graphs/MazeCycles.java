@@ -1,5 +1,7 @@
 package lab11.graphs;
 
+import edu.princeton.cs.algs4.Stack;
+
 /**
  *  @author Josh Hug
  */
@@ -9,14 +11,17 @@ public class MazeCycles extends MazeExplorer {
     public int[] edgeTo;
     public boolean[] marked;
     */
+    private int s;
+    private Stack<Integer> stack;
 
     public MazeCycles(Maze m) {
         super(m);
+
     }
 
     @Override
     public void solve() {
-        // TODO: Your code here!
+
     }
 
     // Helper methods go here
